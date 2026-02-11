@@ -1,0 +1,1135 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+.poppins {
+  font-family: "Poppins", sans-serif;
+}
+
+.roboto {
+  font-family: "Roboto", sans-serif;
+}
+
+.inter {
+  font-family: "Inter", sans-serif;
+}
+
+
+/***************************************************** Header ****************************************************/
+
+.header{
+    position: absolute;
+    width: 100%;
+}
+.logo img{
+    width: 150px;
+}
+.header .nav-link{
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    color: #fff;
+    font-family: "Roboto", sans-serif;
+    padding: 0 6px !important;
+    margin: 0 12px;
+    position: relative;
+}
+
+/* menu links hover effect */
+
+.header .nav-link:hover{
+  color: #fff;
+  text-decoration: none;
+}
+.header .nav-link:before, .header .nav-link:after {
+  content: '';
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  bottom: -2px;
+  background: #fff;
+}
+.header .nav-link:before {
+  left: 0;
+}
+.header .nav-link:after {
+  right: 0;
+  background: #fff;
+  transition: width 0.8s cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+.header .nav-link:hover:before {
+  background: #fff;
+  width: 100%;
+  transition: width 0.5s cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+.header .nav-link:hover:after {
+  background: transparent;
+  width: 100%;
+  transition: 0s;
+}
+
+/************************************************** Hero Banner **************************************************/
+
+.hero_banner{
+    background: linear-gradient(180deg,#982ef8 0%,#2880de 60%,#1a61e7 100%);
+    padding: 120px 0 170px;
+}
+.hero_text_col{
+    padding-top: 50px;
+}
+.hero_titel{
+  font-size: 18px;
+  font-weight: 500;
+  color: #fff;
+  font-family: "Poppins", sans-serif;
+  margin-bottom: 15px;
+}
+.hero_subtitel{
+  font-size: 60px;
+  color: #ffcf2c;
+  text-transform: uppercase;
+  font-weight: 400;
+  letter-spacing: 1.5px;
+  font-family: "Inter", sans-serif;
+  margin-bottom: 15px;
+}
+.hero_subtitel span{
+    font-weight: 600;
+    color: #fff;
+}
+.hero_text{
+    font-size: 16px;
+    line-height: 26px;
+    font-family: "Roboto", sans-serif;
+    color: #fff;
+    font-weight: 300;
+    letter-spacing: 0.5px;
+    padding-right: 135px;
+}
+
+.hero_btn{
+    font-size: 16px;
+    line-height: 20px;
+    font-family: "Poppins", sans-serif;
+    color: #fff;
+    background-color: transparent;
+    font-weight: 600;
+    border: 1px solid #fff;
+    text-decoration: none;
+    display: inline-block;
+    padding: 16px 25px;
+    min-width: 200px;
+    border-radius: 4px;
+    margin-top: 26px;
+    transition: color 0.1s cubic-bezier(0.16, 0.08, 0.355, 1), background 0.1s cubic-bezier(0.16, 0.08, 0.355, 1);
+}
+
+/* banner button hover effect */
+.hero_btn:hover{
+  color: #fff;
+}
+.btn-arrow {
+  position: relative;
+  transition: background-color 300ms ease-out;
+  span {
+    display: inline-block;
+    position: relative;
+    transition: all 300ms ease-out;
+    will-change: transform;
+  }
+  &:hover span {
+    transform: translate3d(-1rem, 0, 0);
+  }
+  svg {
+    position: absolute;
+    width: 1.1em;
+    right: 0px;
+    right: 0rem;
+    opacity: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: all 300ms ease-out;
+    will-change: right, opacity;
+    * {
+      stroke-width: 5;
+      stroke-color: transparent;
+    }
+  }
+  &:hover svg {
+    opacity: 1;
+    right: -2rem;
+  }
+}
+.hero_banner_imgcol{
+  text-align: end;
+}
+.hero_banner_imgcol img{
+  width: 450px;
+}
+
+/*************************************************** Work Section *************************************************/
+
+.work_sec{
+  padding: 120px 0;
+}
+.work_title{
+  font-size: 34px;
+  color: #3d3e3e;
+  font-weight: 600;
+  padding-right: 60px;
+  display: inline-block;
+  font-family: "Poppins", sans-serif;
+  position: relative;
+}
+.work_title::before{
+  content: '';
+  background-color: #ffcf2c;
+  width: 40px;
+  height: 4px;
+  position: absolute;
+  bottom: 24%;
+  right: 0;
+}
+
+/* work button style */
+.work_btn{
+  background: transparent !important;
+  color: #2880de;
+  font-size: 16px;
+  line-height: 20px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  border: 1px solid #1a61e7 !important;
+  border-radius: 4px;
+  padding: 14px 20px;
+  min-width: 160px;
+  letter-spacing: 0.6px;
+  display: inline-block;
+  position: relative;
+  transition: background 0.4s ease;
+}
+.work_btn:hover, .work_btn.active{
+  background: linear-gradient(180deg,#2880de 60%,#1a61e7 100%) !important;
+  border: 1px solid transparent;
+  color: #fff !important;
+}
+
+.work_head{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 40px;
+}
+.work_btn_div{
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  gap: 16px;
+}
+.project_div_col{
+  background-color: #fff;
+  border: 1px solid #3d3e3e3b;
+  border-radius: 6px;
+  display: block;
+  text-decoration: none;
+  padding: 10px 15px 18px;
+  border-radius: 10px;
+  transition: 0.4s ease;
+}
+.project_div_col:hover{
+  border: 1px solid #3d3e3ebc;
+}
+.project_titel{
+  font-size: 20px;
+  color: #3d3e3e;
+  font-weight: 500;
+  margin-bottom: 4px;
+  letter-spacing: 0.5px;
+  font-family: "Roboto", sans-serif;
+}
+.project_type{
+  font-size: 14px;
+  color: #3d3e3e;
+  font-weight: 400;
+  opacity: 0.7;
+  margin-bottom: 0;
+  font-family: "Roboto", sans-serif;
+}
+.project_img_div{
+  text-align: center;
+  position: relative;
+  width: 100%;
+  height: 200px;
+  margin-bottom: 18px;
+}
+.project_img_div img{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  object-position: center;
+  object-fit: cover;
+}
+.mt_24{
+  margin-top: 24px;
+}
+
+/* post tab design */
+
+.post_img_div{
+  position: relative;
+  border-radius: 6px;
+  border: 1px solid #3d3e3e3b;
+  cursor: pointer;
+}
+.post_img_div img{
+  border-radius: 6px;
+}
+.post_overlay_text{
+  background-color: #000000e6;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 6px;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  cursor: pointer;
+}
+.post_overlay_text h6, .post_overlay_text p{
+  color: #fff;
+  opacity: 1;
+}
+.post_img_div:hover .post_overlay_text{
+  opacity: 1;
+}
+.load_more_btn{
+  text-decoration: none;
+  display: block;
+  width: fit-content;
+  margin: 30px auto 0;
+  text-align: center;
+}
+
+
+/************************************************** Skill Section *************************************************/
+
+.skills_sec{
+  background: linear-gradient(180deg,#0c4ac1 60%,#002d5d 100%);
+  padding: 100px 0 80px;
+}
+.skill_titel{
+  font-size: 20px;
+  color: #fff;
+  font-weight: 400;
+  font-family: "Poppins", sans-serif;
+  text-align: center;
+  margin-bottom: 15px;
+}
+.skill_subtitel{
+  font-size: 34px;
+  line-height: 42px;
+  color: #fff;
+  font-weight: 600;
+  font-family: "Poppins", sans-serif;
+  text-align: center;
+  max-width: 660px;
+  margin: 0 auto;
+  text-transform: capitalize;
+  margin-bottom: 50px;
+}
+.skills_div_row{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-top: 60px;
+}
+.skills_div{
+  width: 32%;
+  flex-shrink: 0;
+  position: relative;
+  padding-top: 60px;
+}
+.skill_img{
+  font-size: 102px;
+  font-family: "Poppins", sans-serif;
+  color: #fff;
+  font-weight: 600;
+  line-height: 100px;
+  opacity: 0.2;
+  position: absolute;
+  top: 30px;
+}
+.skill_name{
+  font-size: 20px;
+  color: #fff;
+  font-family: "Roboto", sans-serif;
+  font-weight: 600;
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+  position: relative;
+}
+.skill_name span{
+  font-size: 14px;
+  font-weight: 400;
+}
+.skill_name::before{
+  content: '';
+  background-color: #fff;
+  width: 70%;
+  height: 1px;
+  bottom: 0;
+  left: 0;
+  position: absolute;
+}
+.skill_description{
+  font-size: 16px;
+  line-height: 24px;
+  color: #fff;
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+}
+
+
+/********************************************************************************************************************************************************************** About Page Style ******************************************/
+
+.hero_innerbanner{
+  background: linear-gradient(180deg,#982ef8 0%,#2880de 60%,#1a61e7 100%);
+  padding: 65px 0 60px;
+}
+.hero_innertext_col{
+  text-align: center;
+}
+.hero_innersubtitel{
+  font-size: 50px;
+  font-family: "Inter", sans-serif;
+  font-weight: 500;
+  color: #fff;
+}
+.inner_banner_btn{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+}
+.inner_hero_btn svg{
+  right: unset;
+  left: 0rem;
+  transform: translateY(-50%) rotate(180deg);
+}
+.inner_hero_btn:hover.btn-arrow {
+    &:hover svg {
+        opacity: 1;
+        right: unset;
+        left: -2rem;
+    }
+}
+.inner_hero_btn:hover.btn-arrow {
+    &:hover span {
+        transform: translate3d(1rem, 0, 0);
+    }
+}  
+.inner_banner_btn .hero_btn{
+  margin-top: 12px;
+}
+
+/************************************************** About Section *************************************************/
+
+.about_sec{
+  padding: 100px 0 20px;
+}
+.about_row{
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  gap: 50px;
+}
+.about_title{
+  font-size: 34px;
+  color: #3d3e3e;
+  font-weight: 600;
+  padding-bottom: 18px;
+  display: inline-block;
+  font-family: "Poppins", sans-serif;
+  position: relative;
+}
+.about_title::before {
+  content: '';
+  background-color: #ffcf2c;
+  width: 70px;
+  height: 4px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+.about_pills_div{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-top: 60px;
+}
+.about_pills_div .work_btn{
+  width: 300px;
+  background: linear-gradient(180deg,#2880de 60%,#1a61e7 100%) !important;
+  color: #fff;
+}
+.about_pills_div .btn-arrow.active span {
+  transform: translate3d(-1rem, 0, 0);
+}
+.about_pills_div .btn-arrow.active svg{
+  opacity: 1;
+  right: -2rem;
+}
+.btn-check:focus+.btn, .btn:focus {
+  outline: 0;
+  box-shadow: unset;
+}
+.about_rightcol{
+  margin-top: 120px;
+  width: 60%;
+}
+
+/* personal details */
+
+.personal_detail_titel{
+  font-size: 15px;
+  color: #3d3e3e;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-bottom: 14px;
+  font-family: "Poppins", sans-serif;
+}
+.personal_detail_subtitel{
+  font-size: 33px;
+  color: #3d3e3e;
+  font-weight: 600;
+  padding-bottom: 20px;
+  margin-bottom: 40px;
+  font-family: "Poppins", sans-serif;
+  position: relative;
+}
+.personal_detail_subtitel::after{
+  content: '';
+  background-color: #ffcf2c;
+  width: 90px;
+  height: 2px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+.personal_detail_text{
+  font-size: 16px;
+  line-height: 26px;
+  color: #3d3e3e;
+  text-align: justify;
+  font-family: "Roboto", sans-serif;
+}
+.personal_detail_imgcol{
+  position: relative;
+  margin-top: 45px;
+}
+.personal_detail_imgcol::after{
+  content: '';
+  background-color: #ffcf2c;
+  width: 255px;
+  height: 255px;
+  border-radius: 50%;
+  position: absolute;
+  top: 25px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: -1;
+}
+
+/* experience */
+
+.personal_detail_row{
+  display: flex;
+  justify-content: start;
+  gap: 20px;
+}
+.personal_detail_textcol{
+  flex-shrink: 0;
+  width: 65%;
+}
+.experience_detail_titel{
+  font-size: 28px;
+  color: #3d3e3e;
+  font-weight: 700;
+  margin-bottom: 25px;
+  font-family: "Poppins", sans-serif;
+}
+.experience_description{
+  font-size: 16px;
+  line-height: 26px;
+  color: #3d3e3e;
+  font-family: "Roboto", sans-serif;
+}
+.tools_titel{
+  font-size: 24px;
+  color: #2880de;
+  font-weight: 700;
+  font-family: "Roboto", sans-serif;
+  margin: 30px 0;
+}
+.tool_experience_div{
+  display: flex;
+  justify-content: start;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+.tools_name{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 20px 10px;
+  text-align: center;
+  box-shadow: 0px 0px 6px 0px #00000042;
+  border-radius: 10px;
+  flex-shrink: 0;
+  max-width: 160px;
+  width: 33%;
+  min-height: 120px;
+  cursor: pointer;
+  transition: 0.4s ease;
+}
+.tools_name:hover{
+  box-shadow: 0px 0px 6px 0px #00000085;
+}
+.tools_name h6{
+  font-size: 17px;
+  color: #3d3e3e;
+  margin: 15px 0 0;
+  font-family: "Roboto", sans-serif;
+}
+
+
+/* responsive */
+
+@media (max-width: 1399.98px) {
+  .hero_subtitel {
+    font-size: 55px;
+  }
+  .hero_banner{
+    padding: 70px 0 110px;
+  }
+  .hero_text{
+    padding-right: 58px;
+  }
+  .project_titel {
+    font-size: 18px;
+    letter-spacing: 0.2px;
+  }
+  .project_img_div{
+    height: 180px;
+  }
+  .skills_sec{
+    padding: 90px 0 70px;
+  }
+  .skill_img{
+    font-size: 98px;
+    top: 18px;
+  }
+  .skill_description {
+    font-size: 14px;
+  }
+  .skill_subtitel {
+    font-size: 32px;
+    max-width: 652px;
+  }
+  .skills_div_row{
+    margin-top: 50px;
+  }
+
+  /************************************************ About page *************************************************/
+
+  .hero_innerbanner{
+    padding: 40px 0 50px;
+  }
+  .hero_innersubtitel {
+    font-size: 40px;
+  }
+  .about_rightcol {
+    margin-top: 110px;
+    width: 70%;
+  }
+ 
+}
+
+@media (max-width: 1280.98px) {
+  .hero_banner_imgcol img {
+    width: 400px;
+  }
+ .hero_subtitel {
+    font-size: 50px;
+  }
+  .hero_titel{
+    margin-bottom: 9px;
+  }
+  .hero_text_col {
+    padding-top: 30px;
+  }
+  .hero_btn{
+    margin-top: 20px;
+  }
+}
+
+@media (max-width: 1199.98px) {
+  .hero_subtitel {
+    font-size: 46px;
+  }
+  .hero_text {
+    padding-right: 0px;
+  }
+  .hero_banner_imgcol img {
+    width: 330px;
+  }
+  .hero_titel {
+    margin-bottom: 5px;
+    font-size: 16px;
+  }
+  .hero_btn {
+    margin-top: 14px;
+  }
+  .hero_subtitel{
+    margin-bottom: 10px;
+  }
+  .project_img_div {
+    height: 160px;
+  }
+  .project_titel {
+    font-size: 17px;
+    letter-spacing: 0.2px;
+    margin-bottom: 2px;
+  }
+  .project_type {
+    font-size: 13px;
+  }
+  .project_div_col{
+    padding: 10px 10px 15px;
+  }
+  .skills_div {
+    width: 31%;
+  }
+  .skill_name {
+    font-size: 18px;
+  }
+
+  /************************************************ About page *************************************************/
+  .about_pills_div .work_btn{
+    width: 260px;
+  }
+  .about_row{
+    gap: 42px;
+  }
+  .personal_detail_imgcol::after{
+    height: 220px;
+    width: 220px;
+  }
+  .personal_detail_imgcol{
+    margin-top: 35px;
+  }
+  .tools_name{
+    max-width: 144px;
+  }
+  .personal_detail_subtitel {
+    font-size: 28px;
+  }
+}
+
+@media (max-width: 991.98px) {
+  .hero_banner {
+    padding: 65px 0 90px;
+  } 
+  .hero_subtitel {
+    font-size: 34px;
+  }
+  .hero_text {
+    padding-right: 0px;
+    font-size: 14px;
+    line-height: 21px;
+  }
+  .hero_btn{
+    padding: 13px 25px;
+    min-width: 160px;
+    margin-top: 8px;
+  }
+  .hero_banner_imgcol img {
+    width: 300px;
+  }
+  .work_sec {
+    padding: 100px 0;
+  }
+  .work_title {
+    font-size: 30px;
+    padding-right: 54px;
+  }
+  .work_btn_div{
+    gap: 10px;
+  }
+  .work_btn{
+    padding: 11px 16px;
+    min-width: 152px;
+  }
+  .project_img_div {
+    height: 120px;
+  }
+  .project_titel {
+    font-size: 16px;
+  }
+  .project_type {
+    font-size: 12px;
+  }
+  .skill_subtitel {
+    font-size: 30px;
+    max-width: 562px;
+    line-height: 36px;
+    margin-bottom: 30px;
+  }
+  .skill_description {
+    font-size: 13px;
+    line-height: 22px;
+  }
+  .skills_div_row{
+    margin-top: 30px;
+    gap: 0px 10px;
+  }
+  .skill_name{
+    padding-bottom: 15px;
+    margin-bottom: 15px;
+  }
+  .skills_div{
+    padding-top: 55px;
+  }
+  .skill_img {
+    font-size: 72px;
+    top: 18px;
+    line-height: 80px;
+  }
+
+  /************************************************ About page *************************************************/
+
+  .hero_innerbanner {
+    padding: 35px 0 47px;
+  }
+  .hero_innersubtitel {
+    font-size: 36px;
+  }
+  .about_sec {
+    padding: 90px 0 20px;
+  }
+  .about_pills_div {
+    flex-direction: row;
+    gap: 10px;
+    margin-top: 50px;
+  }
+  .about_pills_div .work_btn {
+    width: 225px;
+    padding: 14px 18px;
+  }
+  .about_row {
+    flex-direction: column;
+    gap: 0px;
+  }
+  .about_rightcol {
+    margin-top: 80px;
+    width: 100%;
+  }
+  .about_pills_div .btn-arrow svg{
+    display: none;
+  }
+  .about_pills_div .btn-arrow.active span{
+    transform: unset;
+  }
+  .about_pills_div .btn-arrow {
+    &:hover span {
+      transform: unset;
+    }
+  }
+  .about_pills_div .work_btn {
+    background: transparent !important;
+    color: #2880de !important;
+    border: 1px solid #1a61e7 !important;
+  }
+  .about_pills_div .work_btn:hover, .about_pills_div .work_btn.active{
+    background: linear-gradient(180deg,#2880de 60%,#1a61e7 100%) !important;
+    color: #fff !important;
+    border: 1px solid transparent !important;
+  }
+  .personal_detail_subtitel {
+    font-size: 30px;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .hero_banner {
+    padding: 60px 0 60px;
+  }
+  .hero_text_col {
+    padding-top: 0;
+    padding-bottom: 40px;
+    text-align: center;
+  }
+  .hero_btn{
+    min-width: 184px;
+  }
+  .hero_subtitel {
+    font-size: 38px;
+  }
+  .hero_banner_imgcol {
+    text-align: center;
+  }
+  .hero_banner_imgcol img {
+    width: 280px;
+  }
+  .work_head{
+    flex-direction: column;
+  }
+  .work_title::before{
+    width: 38px;
+  }
+  .work_title {
+    font-size: 32px;
+    padding-right: 48px;
+    margin-bottom: 20px !important;
+    flex-shrink: 0;
+  }
+  .work_btn {
+    padding: 9px 14px;
+    min-width: 135px;
+    font-size: 14px;
+    letter-spacing: 0.3px;
+  }
+  .project_img_div {
+    height: 160px;
+  }
+  .project_div_col{
+    text-align: center;
+  }
+  .project_titel{
+    margin-bottom: 5px;
+  }
+  .project_div_col{
+    margin-bottom: 16px;
+  }
+  .post_img_div{
+    margin-bottom: 16px;
+  }
+  .work_sec {
+    padding: 80px 0;
+  }
+  .skill_subtitel {
+    font-size: 24px;
+    max-width: 100%;
+    line-height: 30px;
+    margin-bottom: 0;
+  }
+  .skill_titel {
+    font-size: 18px;
+    margin-bottom: 11px;
+  }
+  .skills_sec {
+    padding: 80px 0 40px;
+  }
+  .skills_div {
+    padding-top: 46px;
+    width: 48%;
+  }
+  .skill_name {
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+    font-size: 16px;
+  }
+  .skill_description{
+    line-height: 20px;
+  }
+  .skills_div_row {
+    margin-top: 20px;
+  }
+  .mt_24 {
+    margin-top: 0;
+  }
+
+/************************************************ About page *************************************************/
+  .hero_innersubtitel {
+    font-size: 34px;
+  }
+  .inner_banner_btn{
+    gap: 5px;
+  }
+  .hero_innertext_col .hero_btn{
+    font-size: 15px;
+    min-width: 160px;
+  }
+  .about_title {
+    font-size: 30px;
+    padding-bottom: 15px;
+    width: 100%;
+    text-align: center;
+  }
+  .about_row{
+    justify-content: center;
+  }
+  .about_title::before{
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .about_pills_div .work_btn {
+    width: 176px;
+    padding: 14px 14px;
+  }
+  .about_pills_div{
+    justify-content: center;
+  }
+  .personal_detail_row{
+    flex-direction: column;
+  }
+  .personal_detail_textcol{
+    width: 100%;
+    text-align: center;
+  }
+  .personal_detail_titel{
+    margin-bottom: 10px;
+  }
+  .personal_detail_subtitel::after{
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+  }
+  .personal_detail_text{
+    text-align: center;
+  }
+  .personal_detail_imgcol{
+    text-align: center;
+    margin-top: 0;
+  }
+  .personal_detail_imgcol img{
+    width: 50%;
+  }
+  .experience_detail_div{
+    text-align: center;
+  }
+  .experience_detail_titel{
+    font-size: 26px;
+    line-height: 38px;
+  }
+  .tools_name{
+    max-width: 125px;
+  }
+  .tool_experience_div{
+    gap: 6px;
+    justify-content: center;
+  }
+  .tools_name h6 {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 440.98px) {
+  .about_pills_div .work_btn {
+    width: 176px;
+    padding: 14px 14px;
+  }
+  .personal_detail_subtitel {
+    font-size: 28px;
+  }
+}
+
+@media (max-width: 390.98px) {
+  .hero_subtitel {
+    font-size: 35px;
+  }
+  .hero_text {
+    padding-right: 0px;
+    font-size: 12px;
+    line-height: 20px;
+  }
+  .hero_btn{
+    font-size: 14px;
+    padding: 12px 16px;
+    min-width: 164px;
+    margin-top: 7px;
+  }
+  .hero_banner_imgcol img {
+    max-width: 270px;
+  }
+  .work_title {
+    font-size: 30px;
+    padding-right: 45px;
+    margin-bottom: 18px !important;
+  }
+  .work_title::before {
+    width: 36px;
+  }
+  .skill_description {
+    line-height: 17px;
+    font-size: 12px;
+  }
+
+  /************************************************ About page *************************************************/
+
+  .hero_innersubtitel {
+    font-size: 32px;
+    margin-bottom: 0;
+  }
+  .hero_innertext_col .hero_btn {
+    font-size: 13px;
+  }
+  .inner_hero_btn:hover.btn-arrow {
+    &:hover svg {
+      left: -1.3rem;
+    }
+  }
+  .hero_innerbanner {
+    padding: 30px 0 42px;
+  }
+  .about_sec {
+    padding: 70px 0 20px;
+  }
+  .about_pills_div .work_btn {
+    width: 164px;
+    padding: 11px 10px;
+    font-size: 13px;
+  }
+  .about_pills_div {
+    gap: 10px 5px;
+    margin-top: 40px;
+  }
+  .about_rightcol {
+    margin-top: 60px;
+  }
+  .personal_detail_subtitel {
+    font-size: 30px;
+  }
+  .personal_detail_imgcol img {
+    width: 60%;
+  }
+  .experience_detail_titel {
+    font-size: 22px;
+    line-height: 34px;
+  }
+  .tools_titel {
+    font-size: 22px;
+  }
+  .tools_name {
+    max-width: 107px;
+  }
+  .personal_detail_subtitel {
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 330.98px) {
+  .inner_banner_btn{
+    flex-direction: column;
+    gap: 0px;
+  }
+}
